@@ -1,0 +1,29 @@
+news=> select articles.title, count(sliced_path.sliced_name)as num from articles, sliced_path where articles.slug = sliced_path.sliced_name group by articles.title order by num DESC;
+               title                |  num
+------------------------------------+--------
+ Candidate is jerk, alleges rival   | 338647
+ Bears love berries, alleges bear   | 253801
+ Bad things gone, say good people   | 170098
+ Goats eat Google's lawn            |  84906
+ Trouble for troubled troublemakers |  84810
+ Balloon goons doomed               |  84557
+ There are a lot of bears           |  84504
+ Media obsessed with bears          |  84383
+(8 rows)
+
+news=> select authors_articles.author, count (popular_articles.num) as total_views from authors_articles, popular_articles where authors_articles.article = popular_articles.articles_name group by authors_articles.author order by total_views DESC;
+         author         | total_views 
+------------------------+-------------
+ Ursula La Multa        |           4
+ Rudolf von Treppenwitz |           2
+ Anonymous Contributor  |           1
+ Markoff Chaney         |           1
+(4 rows)
+
+news=> select date, numeric from date_percent where numeric >= 1.00;
+    date    | numeric 
+------------+---------
+ 2016-07-17 |    2.26
+(1 row)
+
+
