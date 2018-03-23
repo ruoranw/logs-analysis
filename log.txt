@@ -7,11 +7,16 @@ What are the most popular three articles of all time?
 (6, '-', 'Balloon goons doomed', '- ', '84557', 'views')
 (7, '-', 'There are a lot of bears', '- ', '84504', 'views')
 (8, '-', 'Media obsessed with bears', '- ', '84383', 'views')
+
 Who are the most popular article authors of all time?
-(1, '-', 'Ursula La Multa', '- ', '4', 'views')
-(2, '-', 'Rudolf von Treppenwitz', '- ', '2', 'views')
-(3, '-', 'Anonymous Contributor', '- ', '1', 'views')
-(4, '-', 'Markoff Chaney', '- ', '1', 'views')
+          name          | views
+------------------------+--------
+ Ursula La Multa        | 507594
+ Rudolf von Treppenwitz | 423457
+ Anonymous Contributor  | 170098
+ Markoff Chaney         |  84557
+(4 rows)
+
 On which days did more than 1% of requests lead to errors?
 (datetime.date(2016, 7, 17), '-', '2.26 % errors')
 
