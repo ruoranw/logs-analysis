@@ -33,6 +33,10 @@ order by views desc;
 ```
 
 ```python
+create view date_total_response as select time::date as date, count (status) as total_response from log group by time::date;
+```
+
+```python
 create view date_fail_rate as select date_total_response.date as date,
 date_fail.fails/date_total_response.total_response::float as fail_rate
 from date_total_response, date_fail
